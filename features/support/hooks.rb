@@ -7,10 +7,10 @@ After do |scenario|
 end
 
 
-Before ('@test-login')
+Before ('@test-login') do
   page.windows[0].maximize
 end
 
-After ('@test-login')
+After ('@test-login') do
   puts "hooks setelah dijalankan"
 end

@@ -10,10 +10,14 @@ end
 
 When('I fill my credentials on the homepage') do
   find(:xpath, "//input[@data-qa='login-email']").set("ogitest@gmail.com")
-  fill_in 'password', with: 'Ogitest123'
-  click_on "Login"
+  find(:xpath, "//input[@data-qa='login-password']").set('Ogitest123')
+  find(:xpath, "//*[@data-qa='login-password']//following-sibling::button").click
 end
 
 Then('I should be logged in') do
-  find(:xpath, "//*[text()='Ogi Test']").should be_visible
+  # url harus https://automationexercise.com/
+  assert_current_path("https://automationexercise.com/", wait: 5)
+  # ada button Delete Account
+  find(:xpath, "//*[contains(text(),'Delete Account')]").should be_visible
+  #find(:xpath, "//*[text()='Ogi Test']").should be_visible
 end
