@@ -15,8 +15,8 @@ Feature: login page
     Given [page object] saya akses halaman automationexercise.com
     When [page object] saya click tombol sign in di homepage
     Then [page object] saya beralih ke halaman login
-    When [page object] saya entry username "asdogitest@gmail.com" di halaman login
-    And [page object] saya entry password "asdOgitest123" di halaman login
+    When [page object] saya entry username "asdfogitest@gmail.com" di halaman login
+    And [page object] saya entry password "asdfOgitest123" di halaman login
     And [page object] saya click tombol login di halaman login
     #Then [page object] saya akan melihat pesan error "Your email or password is incorrect!"
     Then [page object] saya akan melihat pesan error email dan password salah
