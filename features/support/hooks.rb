@@ -8,8 +8,8 @@ After do |scenario|
 end
 
 AfterStep do |scenario|
-  sleep 3
-  take_screenshot
+  # sleep 3
+  # take_screenshot
 end
 
 # After do |scenario|
@@ -27,7 +27,7 @@ After ('@test-login') do
 end
 
 at_exit do
-  generate_report
+  # generate_report
 
-  # Kernel.exit(0)
+  # # Kernel.exit(0)
 end

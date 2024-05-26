@@ -2,6 +2,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'capybara/rspec'
 require 'cucumber'
+require 'dotenv'
 #require 'pry'
 require 'report_builder'
 require 'rspec'
@@ -10,7 +11,12 @@ require 'site_prism'
 
 Capybara.register_driver :selenium do |app|
   options = Selenium::WebDriver::Firefox::Options.new
-  options.add_argument('-private')
+  if ENV['HEADLESS'].downcase == 'yes'
+    options.add_argument('--headless')
+  end
+  if ENV['PRIVATE'].downcase == 'yes'
+    options.add_argument('-private')
+  end
   Capybara::Selenium::Driver.new(
     app,
     browser: :firefox,
