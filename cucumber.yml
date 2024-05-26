@@ -1,3 +1,5 @@
 # default: --format Cucumber::Formatter::HTML -o features/support/reports/cucumber-test.html #<-untuk html
 
-default: -f pretty -f json -o features/support/reports/result-cucumber.json  # <-untuk report_builder
+# default: -f pretty -f json -o features/support/reports/result-cucumber.json  # <-untuk report_builder
+
+default: --retry 3

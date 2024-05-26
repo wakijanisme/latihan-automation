@@ -31,4 +31,4 @@ jobs:
           bundle install
 
       - name: Run Capybara tests
-        run: cucumber -t @search-google HEADLESS=yes PRIVATE=yes --publish --retry 5
+        run: cucumber -t @search-google HEADLESS=yes PRIVATE=yes --publish
