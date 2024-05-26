@@ -1,4 +1,5 @@
 Feature: Google search
+
   @search-google
   Scenario: saya berhasil mencari sesuatu di google.com
     Given saya berada di halaman google.com
@@ -10,3 +11,4 @@ Feature: Google search
       | keyword  |
       | capybara |
       | selenium |
+      | ruby     |
